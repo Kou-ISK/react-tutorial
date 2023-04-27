@@ -5,7 +5,7 @@ import { Todo } from "../types/Todo";
 import { TodoAdd } from "./TodoAdd";
 import { TodoList } from "./TodoList";
 import { TodoTitle } from "./TodoTitle";
-import './App.css';
+import './../App.css';
 
 function App() {
   //カスタムフックから必要な変数を取得
@@ -13,7 +13,7 @@ function App() {
   const inputEl = useRef<HTMLTextAreaElement>(null);
 
   const handleAddTodoListItem = () => {
-    if (inputEl.current?.value === "") {
+    if (inputEl.current!.value === "") {
       return;
     }
     addTodoListItem(inputEl.current!.value);
