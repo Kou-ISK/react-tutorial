@@ -13,7 +13,7 @@ function App() {
   const inputEl = useRef<HTMLTextAreaElement>(null);
 
   const handleAddTodoListItem = () => {
-    if (inputEl.current!.value === "") {
+    if (inputEl.current && inputEl.current.value === "") {
       return;
     }
     addTodoListItem(inputEl.current!.value);
@@ -33,21 +33,19 @@ function App() {
       <header className="App-header">
         React Tutorial
       </header>
-      <body>
-        <p>いいねボタンを作成しました</p>
-        <p>掛け算するよ</p>
-        <label htmlFor="num1">数字1</label><input type="number" id="num1" value={num1} onChange={(event) => setNumber1(event.target.valueAsNumber)} /><br />
-        <label htmlFor="num2">数字2</label><input type="number" id="num2" value={num2} onChange={(event) => setNumber2(event.target.valueAsNumber)} />
-        <p>答えは{num1 * num2}です</p>
-        <p>--------------------------</p>
-        <>
-          <TodoTitle title="TODO進捗管理" as="h1" />
-          <TodoAdd buttonText="+ TODOを追加" inputEl={inputEl} handleAddTodoListItem={handleAddTodoListItem} />
-          <TodoList todoList={incompletedList} toggleTodoListItemStatus={toggleTodoListItemStatus} deleteTodoListItem={deleteTodoListItem} title="未完了TODOリスト" as="h2" />
-          <TodoList todoList={completedList} toggleTodoListItemStatus={toggleTodoListItemStatus} deleteTodoListItem={deleteTodoListItem} title="完了TODOリスト" as="h2" />
-        </>
-      </body>
-      <footer><LikeButton /></footer>
+      <p>いいねボタンを作成しました</p>
+      <p>掛け算するよ</p>
+      <label htmlFor="num1">数字1</label><input type="number" id="num1" value={num1} onChange={(event) => setNumber1(event.target.valueAsNumber)} /><br />
+      <label htmlFor="num2">数字2</label><input type="number" id="num2" value={num2} onChange={(event) => setNumber2(event.target.valueAsNumber)} />
+      <p>答えは{num1 * num2}です</p>
+      <p>--------------------------</p>
+      <>
+        <TodoTitle title="TODO進捗管理" as="h1" />
+        <TodoAdd buttonText="+ TODOを追加" inputEl={inputEl} handleAddTodoListItem={handleAddTodoListItem} />
+        <TodoList todoList={incompletedList} toggleTodoListItemStatus={toggleTodoListItemStatus} deleteTodoListItem={deleteTodoListItem} title="未完了TODOリスト" as="h2" />
+        <TodoList todoList={completedList} toggleTodoListItemStatus={toggleTodoListItemStatus} deleteTodoListItem={deleteTodoListItem} title="完了TODOリスト" as="h2" />
+      </>
+      {/* <footer><LikeButton /></footer> */}
     </div>
   );
 }
