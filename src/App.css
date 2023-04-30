@@ -42,6 +42,10 @@ body {
   height: 40vw;
 }
 
+footer {
+  height: 5vw;
+}
+
 .likeButton {
   background-color: rgb(231, 76, 60);
   color: white;
