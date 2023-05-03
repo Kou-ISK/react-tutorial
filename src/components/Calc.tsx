@@ -1,17 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState } from "react";
 
 export const Calc = ({ num1, num2 }: { num1: number, num2: number }) => {
-    const [state, setState] = useState(false);
+    const [answer, setAnswer] = useState(0);
     const handleClick = () => {
-        setState(!state);
+        setAnswer(num1 * num2);
     };
-    const answer = num1 * num2
-    if (state) {
-        return (
-            <>
-                <p>{answer}</p>
-            </>
-        )
-    } else return <></>
+    return (
+        <>
+            <br />
+            <button onClick={handleClick}>クリックして計算</button>
+            <p>{answer}</p>
+        </>
+    )
 }
