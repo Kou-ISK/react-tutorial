@@ -8,8 +8,10 @@ function App() {
       <header className="App-header">
         <p>React Tutorial</p>
       </header>
-      {/*  ルーティングする部分 */}
-      <Router />
+      <div id="main-content">
+        {/*  ルーティングする部分 */}
+        <Router />
+      </div>
       <footer><LikeButton /></footer>
     </div>
   )

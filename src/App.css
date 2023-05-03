@@ -38,12 +38,13 @@
   }
 }
 
-body {
-  height: 40vw;
+#main-content {
+  padding: 10px;
 }
 
 footer {
-  height: 5vw;
+  padding: 10px;
+
 }
 
 .likeButton {
