@@ -36,6 +36,7 @@ function LikeButton() {
 
 // TODOアプリ作成: https://qiita.com/tseno/items/b7133d73966c405b7249
 
+// モーダル作成: https://reffect.co.jp/react/react-modal
 export const MyModal = ({ show, handleShow }: { show: boolean; handleShow: any }) => {
   if (show) {
     return (
