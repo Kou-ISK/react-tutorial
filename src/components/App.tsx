@@ -26,7 +26,7 @@ function App() {
 export default App;
 
 // いいねボタンを作る: https://typescriptbook.jp/tutorials/react-like-button-tutorial
-function LikeButton() {
+export const LikeButton = () => {
   const [count, setCount] = useState(0);
   const handleClick = () => {
     setCount(count + 1);
