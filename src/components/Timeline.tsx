@@ -2,9 +2,10 @@ import { Tweet } from "../types/Tweet";
 import { TweetItem } from "./TweetItem"
 import React from "react";
 
-export const Timeline = ({ props }: { props: Tweet[] }) => {
-    const tweetList = props.map((tw: Tweet) => (
+export const Timeline = ({ tweets }: { tweets: Tweet[] }) => {
+    const tweetList = tweets.map((tw: Tweet) => (
         <TweetItem
+            id={tw.id}
             icon={tw.icon}
             displayName={tw.displayName}
             accountName={tw.accountName}

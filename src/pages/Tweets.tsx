@@ -1,9 +1,11 @@
 import { TweetItem } from "../components/TweetItem"
 import { Timeline } from "../components/Timeline";
-import React from "react";
+import React, { useCallback, useState } from "react";
+import { Tweet } from "../types/Tweet";
+import { TweetInput } from "../components/TweetInput";
 
 export const Tweets = () => {
-    const tweets = [
+    const [tweets, setTweets] = useState([
         {
             id: 0,
             icon: '🌽',
@@ -18,12 +20,15 @@ export const Tweets = () => {
             accountName: 'evidence',
             content: 'かにみそたべたい'
         }
-    ];
+    ]);
+
+    // addTweet関数はuseCallbackで作成する
+    // これも毎回作成していると重くなるので
+    const addTweet = useCallback((tweet: Tweet) => setTweets((prev: Tweet[]) => [tweet, ...prev]), [setTweets]);
     return (
         <>
-            <Timeline props={tweets} />
-            <TweetItem icon="🌽" displayName="とうもろこし" accountName="morokoshi" content="とうもろこし食べたい" />
-            <TweetItem icon="😀" displayName="にっこり" accountName="nikkori" content="ニコニコしとけ" />
+            <TweetInput addTweet={addTweet} />
+            <Timeline tweets={tweets} />
         </>
     )
 }
