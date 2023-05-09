@@ -94,3 +94,26 @@ footer {
 .account-name {
   color: gray;
 }
+
+.player-list {
+  display: flex;
+}
+
+.player {
+  width: 15vw;
+  text-align: center;
+  align-content: center;
+  margin: 1vw;
+  border: black;
+  border-style: solid;
+  border-radius: 1em;
+}
+
+.player-info {
+  text-align: center;
+  align-content: center;
+}
+
+.player-name {
+  background-color: lightblue;
+}

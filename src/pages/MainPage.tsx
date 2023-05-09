@@ -1,9 +1,4 @@
 import React, { useState, useRef } from 'react';
-import { useTodo } from "../hooks/useTodo";
-import { Todo } from "../types/Todo";
-import { TodoAdd } from "./../components/TodoAdd";
-import { TodoList } from "./../components/TodoList";
-import { TodoTitle } from "./../components/TodoTitle";
 import { HelloWorldButton } from './../components/HelloWorldButton';
 import { StarRating } from '../components/StarRating';
 import { Calc } from './../components/Calc';
