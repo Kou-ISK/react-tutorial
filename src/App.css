@@ -100,7 +100,8 @@ footer {
 }
 
 .player {
-  width: 15vw;
+  width: 10vw;
+  height: 15vw;
   text-align: center;
   align-content: center;
   margin: 1vw;
@@ -116,4 +117,63 @@ footer {
 
 .player-name {
   background-color: lightblue;
+}
+
+#input-component {
+  display: flex;
+}
+
+.PR1 {
+  position: absolute;
+  top: 20vw;
+  left: 10vw;
+}
+
+.HO {
+  position: absolute;
+  top: 20vw;
+  align-self: center;
+  left: 45vw;
+}
+
+.PR3 {
+  position: absolute;
+  top: 20vw;
+  right: 10vw;
+}
+
+.LO4 {
+  position: absolute;
+  top: 40vw;
+  left: 30vw;
+}
+
+.LO5 {
+  position: absolute;
+  top: 40vw;
+  right: 30vw;
+}
+
+.FL6 {
+  position: absolute;
+  top: 40vw;
+  left: 5vw;
+}
+
+.FL7 {
+  position: absolute;
+  top: 40vw;
+  right: 5vw;
+}
+
+.NO8 {
+  position: absolute;
+  top: 60vw;
+  left: 45vw;
+}
+
+.SH {
+  position: absolute;
+  top: 80vw;
+  left: 45vw;
 }
