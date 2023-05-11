@@ -1,0 +1,64 @@
+{
+  "positionList": [
+    {
+      "positionNum": 1,
+      "position": "PR1"
+    },
+    {
+      "positionNum": 2,
+      "position": "HO"
+    },
+    {
+      "positionNum": 3,
+      "position": "PR3"
+    },
+    {
+      "positionNum": 4,
+      "position": "LO4"
+    },
+    {
+      "positionNum": 5,
+      "position": "LO5"
+    },
+    {
+      "positionNum": 6,
+      "position": "FL6"
+    },
+    {
+      "positionNum": 7,
+      "position": "FL7"
+    },
+    {
+      "positionNum": 8,
+      "position": "NO8"
+    },
+    {
+      "positionNum": 9,
+      "position": "SH"
+    },
+    {
+      "positionNum": 10,
+      "position": "SO"
+    },
+    {
+      "positionNum": 11,
+      "position": "WTB11"
+    },
+    {
+      "positionNum": 12,
+      "position": "CTB12"
+    },
+    {
+      "positionNum": 13,
+      "position": "CTB13"
+    },
+    {
+      "positionNum": 14,
+      "position": "WTB14"
+    },
+    {
+      "positionNum": 15,
+      "position": "FB"
+    }
+  ]
+}

@@ -8,8 +8,8 @@ export const PlayerItem = (player: Player) => {
                 <div className="player">
                     <h1 className="player-name">{player.name}</h1>
                     <div className="player-info">
-                        <h2 className="position-num">{player.positionNum}</h2>
-                        <h2 className="position-name">{player.position}</h2>
+                        <p className="position-num">{player.positionNum}</p>
+                        <p className="position-name">{player.position}</p>
                     </div>
                 </div>
             </div>
