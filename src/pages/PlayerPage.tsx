@@ -4,6 +4,10 @@ import { Player } from "../types/Player";
 import { PlayerInput } from "../components/PlayerInput";
 
 export const PlayerPage = () => {
+    const [show, setShow] = useState(false);
+    const handleShow = () => {
+        setShow(!show);
+    }
     const [playerList, setPlayerList] = useState([
         {
             positionNum: 2,
@@ -24,7 +28,8 @@ export const PlayerPage = () => {
     const addPlayer = useCallback((player: Player) => setPlayerList((prev: Player[]) => [player, ...prev]), [setPlayerList]);
     return (
         <>
-            <PlayerInput addPlayer={addPlayer} id="player-input" />
+            <button onClick={handleShow}>選手を追加</button>
+            <PlayerInput props={addPlayer} show={show} handleShow={handleShow} />
             <PlayerList playerList={playerList} />
         </>
     )

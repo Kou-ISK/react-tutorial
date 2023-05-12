@@ -52,6 +52,7 @@ footer {
 #overlay {
   /*　画面全体を覆う設定　*/
   position: fixed;
+  z-index: 3;
   top: 0;
   left: 0;
   width: 100%;
@@ -61,7 +62,6 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 #content {
@@ -100,7 +100,8 @@ footer {
 }
 
 .player {
-  width: 10vw;
+  width: fit-content;
+  max-width: 10vw;
   height: auto;
   text-align: center;
   align-content: center;
@@ -118,9 +119,14 @@ footer {
   margin: none;
 }
 
+#player-input {
+  align-content: space-between;
+  margin: 10px;
+}
+
 .player-name {
   font-size: larger;
-  background-color: lightblue;
+  background-color: lightcoral;
   margin: 0px;
 }
 
@@ -139,90 +145,105 @@ footer {
 }
 
 .PR1 {
+  z-index: 1;
   position: absolute;
   top: 20vw;
   left: 30vw;
 }
 
 .HO {
+  z-index: 1;
   position: absolute;
   top: 20vw;
   left: 44vw;
 }
 
 .PR3 {
+  z-index: 1;
   position: absolute;
   top: 20vw;
   right: 30vw;
 }
 
 .LO4 {
+  z-index: 1;
   position: absolute;
   top: 27vw;
   left: 35vw;
 }
 
 .LO5 {
+  z-index: 1;
   position: absolute;
   top: 27vw;
   right: 35vw;
 }
 
 .FL6 {
+  z-index: 1;
   position: absolute;
   top: 27vw;
   left: 20vw;
 }
 
 .FL7 {
+  z-index: 1;
   position: absolute;
   top: 27vw;
   right: 20vw;
 }
 
 .NO8 {
+  z-index: 1;
   position: absolute;
   top: 34vw;
   left: 44vw;
 }
 
 .SH {
+  z-index: 1;
   position: absolute;
   top: 45vw;
   left: 35vw;
 }
 
 .SO {
+  z-index: 1;
   position: absolute;
   top: 50vw;
   right: 35vw;
 }
 
 .CTB12 {
+  z-index: 1;
   position: absolute;
   top: 57vw;
   left: 23vw;
 }
 
 .CTB13 {
+  z-index: 1;
   position: absolute;
   top: 57vw;
   right: 23vw;
 }
 
 .WTB11 {
+  z-index: 1;
   position: absolute;
   top: 64vw;
   left: 10vw;
 }
 
 .WTB14 {
+  z-index: 1;
   position: absolute;
   top: 64vw;
   right: 10vw;
 }
 
 .FB {
+  z-index: 1;
   position: absolute;
   top: 64vw;
   left: 44vw;
