@@ -101,6 +101,7 @@ footer {
 
 .player {
   width: fit-content;
+  min-width: 70px;
   max-width: 10vw;
   height: auto;
   text-align: center;
@@ -121,7 +122,7 @@ footer {
 
 #player-input {
   align-content: space-between;
-  background-color: #61dafb;
+  background-color: lightslategray;
   margin: 10px;
 }
 

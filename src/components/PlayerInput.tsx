@@ -2,7 +2,7 @@ import React, { EventHandler, useCallback, useRef, useState } from "react"
 import position from "./../position.json"
 import { Player } from "../types/Player";
 
-export const PlayerInput = ({ props, show, handleShow }: { props: any; show: boolean; handleShow: any }) => {
+export const PlayerInput = ({ addPlayerToList, show, handleShow }: { addPlayerToList: Function; show: boolean; handleShow: any }) => {
     const positionNumRef = useRef<HTMLInputElement | null>(null);
     const positionRef = useRef<HTMLInputElement | null>(null);
     const nameRef = useRef<HTMLInputElement | null>(null);
@@ -15,13 +15,15 @@ export const PlayerInput = ({ props, show, handleShow }: { props: any; show: boo
     // TODO エラーを解消する
     const addPlayer = useCallback(() => {
         if (positionNumRef.current && positionRef.current && nameRef.current) {
-            props.addPlayer({
+            addPlayerToList({
                 positionNum: positionNumRef.current.value,
                 position: positionRef.current.value,
                 name: nameRef.current.value
             });
+            handleShow()
         }
-    }, [positionNumRef.current, , positionRef.current, nameRef.current, props.addPlayer]);
+    }, [positionNumRef.current, , positionRef.current, nameRef.current, addPlayerToList]);
+
     if (show) {
         return (
             <div id="overlay">

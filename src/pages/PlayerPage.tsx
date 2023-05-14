@@ -25,11 +25,11 @@ export const PlayerPage = () => {
     // 新規プレーヤー追加用コンポーネント作成
     // ドラッグ&ドロップで並び替えられるようにする
     // positionNumに応じて配置を変えられるようにする
-    const addPlayer = useCallback((player: Player) => setPlayerList((prev: Player[]) => [player, ...prev]), [setPlayerList]);
+    const addPlayer: Function = useCallback((player: Player) => setPlayerList((prev: Player[]) => [player, ...prev]), [setPlayerList]);
     return (
         <>
             <button onClick={handleShow}>選手を追加</button>
-            <PlayerInput props={addPlayer} show={show} handleShow={handleShow} />
+            <PlayerInput addPlayerToList={addPlayer} show={show} handleShow={handleShow} />
             <PlayerList playerList={playerList} />
         </>
     )
