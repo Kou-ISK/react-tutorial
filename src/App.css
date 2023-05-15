@@ -9,6 +9,14 @@
   }
 }
 
+#nav-item-list {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: aliceblue;
+  padding: 10px;
+  margin: 0;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 10vh;
@@ -32,10 +40,6 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-#main-content {
-  padding: 10px;
 }
 
 footer {

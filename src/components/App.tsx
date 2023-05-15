@@ -12,6 +12,7 @@ function App() {
       <header className="App-header">
         <p>React Tutorial</p>
       </header>
+      <Navigation />
       <div id="main-content">
         <button onClick={handleShow}>モーダルを表示</button>
         <MyModal show={show} handleShow={handleShow} />
@@ -48,5 +49,19 @@ export const MyModal = ({ show, handleShow }: { show: boolean; handleShow: any }
       </div >
     )
   } else return <></>
+}
+
+export const Navigation = () => {
+  return (
+    <nav>
+      <ul id="nav-item-list">
+        <li><a href="/">Index</a></li>
+        <li><a href="/player">Player</a></li>
+        <li><a href="/todo">Todo</a></li>
+        <li><a href="/page2">Page2</a></li>
+        <li><a href="/tweet">Tweet</a></li>
+      </ul>
+    </nav>
+  )
 }
 
