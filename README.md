@@ -1,3 +1,6 @@
+# Goal of this repository
+Reactの挙動を学ぶこと。
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
