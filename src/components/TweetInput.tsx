@@ -12,6 +12,7 @@ export const TweetInput = (props: any) => {
                 accountName: "pirates",
                 content: textareaRef.current.value
             });
+            textareaRef.current.value = "";
         }
     }, [textareaRef.current, props.addTweet]);
     return (
