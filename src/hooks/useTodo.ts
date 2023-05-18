@@ -51,3 +51,5 @@ export const useTodo = () => {
     // 作成した関数を返す
     return { todoList, toggleTodoListItemStatus, addTodoListItem, deleteTodoListItem };
 };
+
+// React Hooksについて　https://qiita.com/seira/items/fccdf4e73c59c491558d

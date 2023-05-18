@@ -12,7 +12,6 @@ export const PlayerInput = ({ addPlayerToList, show, handleShow }: { addPlayerTo
             setPositionValue(position.positionList[Number(positionNumRef.current.value) - 1].position);
         }
     }
-    // TODO エラーを解消する
     const addPlayer = useCallback(() => {
         if (positionNumRef.current && positionRef.current && nameRef.current) {
             addPlayerToList({
