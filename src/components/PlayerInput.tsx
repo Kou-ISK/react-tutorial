@@ -1,8 +1,11 @@
 import React, { EventHandler, useCallback, useRef, useState } from "react"
 import position from "./../position.json"
 import { Player } from "../types/Player";
+import { Button } from "@mui/material";
 
-export const PlayerInput = ({ addPlayerToList, show, handleShow }: { addPlayerToList: Function; show: boolean; handleShow: any }) => {
+
+
+export const PlayerInput = ({ addPlayerToList, handleClick, show, handleShow }: { addPlayerToList: Function; handleClick: Function; show: boolean; handleShow: any }) => {
     const positionNumRef = useRef<HTMLInputElement | null>(null);
     const positionRef = useRef<HTMLInputElement | null>(null);
     const nameRef = useRef<HTMLInputElement | null>(null);
@@ -20,8 +23,10 @@ export const PlayerInput = ({ addPlayerToList, show, handleShow }: { addPlayerTo
                 name: nameRef.current.value
             });
             handleShow()
+            handleClick()
         }
     }, [positionNumRef.current, , positionRef.current, nameRef.current, addPlayerToList]);
+
 
     if (show) {
         return (
@@ -40,8 +45,8 @@ export const PlayerInput = ({ addPlayerToList, show, handleShow }: { addPlayerTo
                             <label htmlFor="name">名前</label>
                             <input name="name" type="text" ref={nameRef} />
                         </div>
-                        <div><button onClick={addPlayer} className="add-player">新規プレーヤー作成</button></div>
-                        <button onClick={handleShow}>閉じる</button>
+                        <div><Button variant="contained" onClick={addPlayer} className="add-player">新規プレーヤー作成</Button></div>
+                        <Button variant="contained" onClick={handleShow}>閉じる</Button>
                     </div>
                 </div>
             </div>

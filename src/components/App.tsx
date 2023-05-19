@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Router } from "./../router/Router";
 import './../App.css';
+import { Button } from "@mui/material";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -14,7 +15,7 @@ function App() {
       </header>
       <Navigation />
       <div id="main-content">
-        <button onClick={handleShow}>モーダルを表示</button>
+        <Button variant="contained" onClick={handleShow}>モーダルを表示</Button>
         <MyModal show={show} handleShow={handleShow} />
         {/*  ルーティングする部分 */}
         <Router />
@@ -36,7 +37,7 @@ export const LikeButton = () => {
 };
 
 // TODOアプリ作成: https://qiita.com/tseno/items/b7133d73966c405b7249
-
+// Material UIについて: https://mui.com/material-ui/getting-started/overview/
 // モーダル作成: https://reffect.co.jp/react/react-modal
 export const MyModal = ({ show, handleShow }: { show: boolean; handleShow: any }) => {
   if (show) {
@@ -44,7 +45,7 @@ export const MyModal = ({ show, handleShow }: { show: boolean; handleShow: any }
       <div id="overlay">
         <div id="content">
           <p>モーダルです</p>
-          <button onClick={handleShow}>閉じる</button>
+          <Button variant="contained" onClick={handleShow}>閉じる</Button>
         </div>
       </div >
     )
