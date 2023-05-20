@@ -1,64 +1,64 @@
 {
   "positionList": [
     {
-      "positionNum": 1,
-      "position": "PR1"
+      "id": 1,
+      "label": "PR1"
     },
     {
-      "positionNum": 2,
-      "position": "HO"
+      "id": 2,
+      "label": "HO"
     },
     {
-      "positionNum": 3,
-      "position": "PR3"
+      "id": 3,
+      "label": "PR3"
     },
     {
-      "positionNum": 4,
-      "position": "LO4"
+      "id": 4,
+      "label": "LO4"
     },
     {
-      "positionNum": 5,
-      "position": "LO5"
+      "id": 5,
+      "label": "LO5"
     },
     {
-      "positionNum": 6,
-      "position": "FL6"
+      "id": 6,
+      "label": "FL6"
     },
     {
-      "positionNum": 7,
-      "position": "FL7"
+      "id": 7,
+      "label": "FL7"
     },
     {
-      "positionNum": 8,
-      "position": "NO8"
+      "id": 8,
+      "label": "NO8"
     },
     {
-      "positionNum": 9,
-      "position": "SH"
+      "id": 9,
+      "label": "SH"
     },
     {
-      "positionNum": 10,
-      "position": "SO"
+      "id": 10,
+      "label": "SO"
     },
     {
-      "positionNum": 11,
-      "position": "WTB11"
+      "id": 11,
+      "label": "WTB11"
     },
     {
-      "positionNum": 12,
-      "position": "CTB12"
+      "id": 12,
+      "label": "CTB12"
     },
     {
-      "positionNum": 13,
-      "position": "CTB13"
+      "id": 13,
+      "label": "CTB13"
     },
     {
-      "positionNum": 14,
-      "position": "WTB14"
+      "id": 14,
+      "label": "WTB14"
     },
     {
-      "positionNum": 15,
-      "position": "FB"
+      "id": 15,
+      "label": "FB"
     }
   ]
 }

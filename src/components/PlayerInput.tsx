@@ -2,6 +2,8 @@ import React, { EventHandler, useCallback, useRef, useState } from "react"
 import position from "./../position.json"
 import { Player } from "../types/Player";
 import { Button } from "@mui/material";
+import TextField from '@mui/material/TextField';
+import Autocomplete from '@mui/material/Autocomplete';
 
 
 
@@ -12,7 +14,7 @@ export const PlayerInput = ({ addPlayerToList, handleClick, show, handleShow }: 
     const [positionValue, setPositionValue] = useState("");
     const positionValueAutoCompletion = () => {
         if (positionNumRef.current && Number(positionNumRef.current.value) < 16 && Number(positionNumRef.current.value) >= 1 && positionNumRef.current.value != null) {
-            setPositionValue(position.positionList[Number(positionNumRef.current.value) - 1].position);
+            setPositionValue(position.positionList[Number(positionNumRef.current.value) - 1].label);
         }
     }
     const addPlayer = useCallback(() => {
@@ -39,6 +41,13 @@ export const PlayerInput = ({ addPlayerToList, handleClick, show, handleShow }: 
                         </div>
                         <div className="input-component">
                             <label htmlFor="position">ポジション</label>
+                            <Autocomplete
+                                disablePortal
+                                id="combo-box-demo"
+                                options={position.positionList}
+                                sx={{ width: 300 }}
+                                renderInput={(params) => <TextField {...params} label="Position" ref={positionRef} name="position" />}
+                            />
                             <input name="position" type="text" ref={positionRef} value={positionValue} />
                         </div>
                         <div className="input-component">
