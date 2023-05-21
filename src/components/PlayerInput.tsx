@@ -12,22 +12,23 @@ export const PlayerInput = ({ addPlayerToList, handleClick, show, handleShow }: 
     const positionRef = useRef<HTMLInputElement | null>(null);
     const nameRef = useRef<HTMLInputElement | null>(null);
     const [positionValue, setPositionValue] = useState("");
+    const [positionNum, setPositionNum] = useState<number | null>();
     const positionValueAutoCompletion = () => {
         if (positionNumRef.current && Number(positionNumRef.current.value) < 16 && Number(positionNumRef.current.value) >= 1 && positionNumRef.current.value != null) {
             setPositionValue(position.positionList[Number(positionNumRef.current.value) - 1].label);
         }
     }
     const addPlayer = useCallback(() => {
-        if (positionNumRef.current && positionRef.current && nameRef.current) {
+        if (positionNum && positionValue && nameRef.current) {
             addPlayerToList({
-                positionNum: positionNumRef.current.value,
-                position: positionRef.current.value,
+                positionNum: positionNum,
+                position: positionValue,
                 name: nameRef.current.value
             });
             handleShow()
             handleClick()
         }
-    }, [positionNumRef.current, , positionRef.current, nameRef.current, addPlayerToList]);
+    }, [positionNum, , positionValue, nameRef.current, addPlayerToList]);
 
 
     if (show) {
@@ -37,7 +38,7 @@ export const PlayerInput = ({ addPlayerToList, handleClick, show, handleShow }: 
                     <div id="player-input">
                         <div className="input-component">
                             <label htmlFor="position-number">番号</label>
-                            <input name="position-number" type="number" ref={positionNumRef} onChange={positionValueAutoCompletion} />
+                            <input name="position-number" type="number" onChange={positionValueAutoCompletion} value={String(positionNum)} />
                         </div>
                         <div className="input-component">
                             <label htmlFor="position">ポジション</label>
@@ -46,9 +47,9 @@ export const PlayerInput = ({ addPlayerToList, handleClick, show, handleShow }: 
                                 id="combo-box-demo"
                                 options={position.positionList}
                                 sx={{ width: 300 }}
-                                renderInput={(params) => <TextField {...params} label="Position" ref={positionRef} name="position" />}
+                                onChange={(event, newValue) => { if (newValue) { setPositionNum(newValue.id); setPositionValue(newValue.label) } }}
+                                renderInput={(params) => <TextField {...params} ref={positionRef} label="Position" name="position" />}
                             />
-                            <input name="position" type="text" ref={positionRef} value={positionValue} />
                         </div>
                         <div className="input-component">
                             <label htmlFor="name">名前</label>
