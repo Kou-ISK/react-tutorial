@@ -5,6 +5,7 @@ import { MainPage } from "../pages/MainPage";
 import { TodoAppPage } from "../pages/TodoAppPage";
 import { Tweets } from "../pages/Tweets";
 import { PlayerPage } from "../pages/PlayerPage";
+import { ChartView } from "../pages/ChartView";
 
 export const Router = () => {
     return (
@@ -16,6 +17,7 @@ export const Router = () => {
                     <Route path="/page2" element={<Page2 />} />
                     <Route path="/tweet" element={<Tweets />} />
                     <Route path="/player" element={<PlayerPage />} />
+                    <Route path="/chart" element={<ChartView />} />
                 </Routes>
             </BrowserRouter>
         </>
