@@ -2,6 +2,8 @@ import React, { useState, useRef } from 'react';
 import { Router } from "./../router/Router";
 import './../App.css';
 import { Button } from "@mui/material";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -54,15 +56,20 @@ export const MyModal = ({ show, handleShow }: { show: boolean; handleShow: any }
 
 export const Navigation = () => {
   return (
-    <nav>
-      <ul id="nav-item-list">
-        <li><a href="/">Index</a></li>
-        <li><a href="/player">Player</a></li>
-        <li><a href="/todo">Todo</a></li>
-        <li><a href="/page2">Page2</a></li>
-        <li><a href="/tweet">Tweet</a></li>
-      </ul>
-    </nav>
+    <Toolbar>
+      <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+        <nav>
+          <ul id="nav-item-list">
+            <li><a href="/">Index</a></li>
+            <li><a href="/player">Player</a></li>
+            <li><a href="/todo">Todo</a></li>
+            <li><a href="/page2">Page2</a></li>
+            <li><a href="/tweet">Tweet</a></li>
+            <li><a href="/chart">Chart</a></li>
+          </ul>
+        </nav>
+      </Typography>
+    </Toolbar>
   )
 }
 
