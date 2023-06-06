@@ -1,9 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { Router } from "./../router/Router";
 import './../App.css';
-import { Button } from "@mui/material";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
+import { Button, Toolbar, AppBar, Typography, Box } from "@mui/material";
 
 function App() {
   const [show, setShow] = useState(false);
@@ -56,20 +54,19 @@ export const MyModal = ({ show, handleShow }: { show: boolean; handleShow: any }
 
 export const Navigation = () => {
   return (
-    <Toolbar>
-      <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-        <nav>
-          <ul id="nav-item-list">
-            <li><a href="/">Index</a></li>
-            <li><a href="/player">Player</a></li>
-            <li><a href="/todo">Todo</a></li>
-            <li><a href="/page2">Page2</a></li>
-            <li><a href="/tweet">Tweet</a></li>
-            <li><a href="/chart">Chart</a></li>
-          </ul>
-        </nav>
-      </Typography>
-    </Toolbar>
+    <AppBar position="static">
+      <Toolbar>
+        <Typography variant="h6" component="center" sx={{ flexGrow: 1 }}>
+          <Box textAlign="center"><a href="/">Index</a>
+            <a href="/player">Player</a>
+            <a href="/todo">Todo</a>
+            <a href="/page2">Page2</a>
+            <a href="/tweet">Tweet</a>
+            <a href="/chart">Chart</a>
+          </Box>
+        </Typography>
+      </Toolbar >
+    </AppBar>
   )
 }
 

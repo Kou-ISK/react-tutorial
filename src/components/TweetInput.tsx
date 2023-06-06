@@ -1,5 +1,6 @@
 import React, { useCallback, useRef } from "react"
 import { Tweet } from "../types/Tweet";
+import { Button } from "@mui/material";
 
 export const TweetInput = (props: any) => {
     const textareaRef = useRef<HTMLTextAreaElement | null>(null)
@@ -18,7 +19,7 @@ export const TweetInput = (props: any) => {
     return (
         <div>
             <div><textarea className="tweet-textarea" ref={textareaRef}></textarea></div>
-            <div><button onClick={sendTweet} className="send-tweet">Tweet</button></div>
+            <div><Button onClick={sendTweet} className="send-tweet">Tweet</Button></div>
         </div>
     )
 }
